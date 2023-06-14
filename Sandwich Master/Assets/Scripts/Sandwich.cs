@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Sandwich", menuName ="Sandwich")]
 public class Sandwich : ScriptableObject
 {
-    [SerializeField] private string sandwichName;
-    [SerializeField] private List<GameObject> ingredients;
+    public string sandwichName;
+    public List<GameObject> ingredients = new List<GameObject>();
 
-    [SerializeField] private Sprite sandwichIcon;
+    public Sprite sandwichIcon;
+    public Sprite sandwichRecipe;
 }

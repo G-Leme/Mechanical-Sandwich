@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac15982e7466dbf41b3b493df01a04ff, type: 3}
   m_Name: CrunchyByteSandwich
   m_EditorClassIdentifier: 
-  sandwichName: CrunchyByteSandwich
+  sandwichName: Crunchy Byte Sandwich
   ingredients:
   - {fileID: 3677886049393504877, guid: 0ced526d4f8e94f449ef0f450ae95964, type: 3}
   - {fileID: 8380075751554123305, guid: 381bdd3c7b3bb6f48982194910d146b3, type: 3}
   - {fileID: 6963274051330792060, guid: 6d6291a4a11fec1418e60e564f6d2fd7, type: 3}
-  sandwichIcon: {fileID: 0}
+  sandwichIcon: {fileID: 21300000, guid: 1cc727f34ec8fa54bbcb72f086fcffca, type: 3}
+  sandwichRecipe: {fileID: 21300000, guid: 0577c9818b01cc3489e1037cd4ebb9f5, type: 3}
