@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandwichName: EngineBoostSandwich
   ingredients:
-  - {fileID: 8380075751554123305, guid: 381bdd3c7b3bb6f48982194910d146b3, type: 3}
-  - {fileID: 7589273030182510274, guid: e248703c76ec28149b6ad3452e8f9297, type: 3}
-  - {fileID: 6963274051330792060, guid: 6d6291a4a11fec1418e60e564f6d2fd7, type: 3}
+  - {fileID: 3127839279217159310, guid: ea3639c0a4a56e641bad05504b335e70, type: 3}
+  - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}
+  - {fileID: 3480243244960299475, guid: 49b762e6a643c7348be10dc5bdee8e26, type: 3}
   sandwichIcon: {fileID: 21300000, guid: 20dfc6722cc3db849ac38a3096bf69f1, type: 3}
-  sandwichRecipe: {fileID: 21300000, guid: 751c46f7e3e264e4f93b0950394abb0b, type: 3}
+  sandwichRecipe: {fileID: 21300000, guid: 2f153bcae37ec8b4b88874857d3db83f, type: 3}

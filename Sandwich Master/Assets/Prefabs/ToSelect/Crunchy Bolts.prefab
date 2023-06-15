@@ -96,8 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c404000f2bf16458e9a50bcbf98d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingredient: {fileID: 0}
+  ingredient: {fileID: 7393285762444543312, guid: f182d3879d2838846a442b0004cdb6f3, type: 3}
   ingredientPos: {fileID: 0}
+  sandwichManagerScript: {fileID: 0}
+  sandwichManager: {fileID: 0}
 --- !u!58 &713782135173669191
 CircleCollider2D:
   m_ObjectHideFlags: 0
