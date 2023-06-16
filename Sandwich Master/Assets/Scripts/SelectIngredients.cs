@@ -80,7 +80,7 @@ public class SelectIngredients : MonoBehaviour
         GameObject[] ingredientInstances = GameObject.FindGameObjectsWithTag("Ingredients");
         foreach(GameObject instance in ingredientInstances)
         {
-            GameObject.Destroy(instance, 1f);
+            GameObject.Destroy(instance, 1.43f);
         }
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac15982e7466dbf41b3b493df01a04ff, type: 3}
   m_Name: HardDriveSandwich
   m_EditorClassIdentifier: 
-  sandwichName: HardDriveSandwich
+  sandwichName: Hard Drive Sandwich
   ingredients:
   - {fileID: 7393285762444543312, guid: f182d3879d2838846a442b0004cdb6f3, type: 3}
   - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}

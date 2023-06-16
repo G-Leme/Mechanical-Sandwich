@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac15982e7466dbf41b3b493df01a04ff, type: 3}
   m_Name: UpgradeSandwich
   m_EditorClassIdentifier: 
-  sandwichName: UpgradeSandwich
+  sandwichName: Upgrade Sandwich
   ingredients:
   - {fileID: 3127839279217159310, guid: ea3639c0a4a56e641bad05504b335e70, type: 3}
   - {fileID: 5699754717949636318, guid: 2982b585e7a91cb4385cb7e9d6ccec3e, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.Playables;
 
 public class SandwichManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class SandwichManager : MonoBehaviour
     public Image sandwichRecipeDisplay;
 
     public bool sandwichIsDone;
+
+    [SerializeField] private PlayableDirector breadAnimation;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +46,7 @@ public class SandwichManager : MonoBehaviour
 
         if (sandwichIsDone == true)
         {
-            
+            breadAnimation.Play();
             currentSandwich = sandwiches[Random.Range(0, sandwiches.Length)];
             sandwichIsDone = false;
         }
