@@ -9,27 +9,37 @@ public class SelectIngredients : MonoBehaviour
     [SerializeField] private Transform ingredientPos;
     [SerializeField] private SandwichManager sandwichManagerScript;
     [SerializeField] private GameObject sandwichManager;
-  
+    [SerializeField] private Vector3 scale;
+    private float delay;
 
 
     private bool canClick;
 
     private void Start()
     {
+       
+        delay = 3;
         canClick = true;
         sandwichManagerScript = sandwichManager.GetComponent<SandwichManager>();
     }
 
     private void Update()
     {
+        transform.localScale = scale;
+        
+
         if (sandwichManagerScript.sandwichIsDone == true)
         {
             DestroyInstances();
             canClick = true;
         }
 
-      
-        
+        if (delay >= 0)
+        {
+            delay = delay -= Time.deltaTime;
+        }
+
+
 
     }
     private Vector3 MouseWorldPosition()
@@ -39,7 +49,7 @@ public class SelectIngredients : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (canClick == true)
+        if (canClick == true && delay <= 0)
         {
            
             var ingredientInstance = GameObject.Instantiate(ingredient, ingredientPos.position, Quaternion.Euler(new Vector3(0, 0, 49)));
@@ -47,6 +57,22 @@ public class SelectIngredients : MonoBehaviour
             canClick = false;
            
         }
+    }
+
+    private void OnMouseEnter()
+    {
+
+        scale.x += 0.035f;
+        scale.y += 0.035f;
+        scale.z += 0.035f;
+
+    }
+
+    private void OnMouseExit()
+    {
+        scale.x -= 0.035f;
+        scale.y -= 0.035f;
+        scale.z -= 0.035f;
     }
 
     private void DestroyInstances()
