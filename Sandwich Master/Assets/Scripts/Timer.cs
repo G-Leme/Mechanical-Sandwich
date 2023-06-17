@@ -10,7 +10,9 @@ public class Timer : MonoBehaviour
     [SerializeField] private AudioSource timeAudio;
     [SerializeField] private GameObject timeUpUI;
     [SerializeField] private GameObject playAgainMenu;
-    [SerializeField] private GameObject mainGame;
+    [SerializeField] private GameObject playAgainButton;
+
+    [SerializeField] private GameObject Image;
 
     private float delay;
 
@@ -55,7 +57,10 @@ public class Timer : MonoBehaviour
     IEnumerator EnableScoreUI()
     {
         yield return new WaitForSeconds(2f);
-        playAgainMenu.SetActive(true);
-        mainGame.SetActive(false);
+        playAgainMenu.transform.position = new Vector3(0, 0, 0);
+        playAgainButton.SetActive(true);
+        Image.SetActive(false);
+        Score.Instance.finalScoreUI.text = ("SCORE: " + Score.Instance.score.ToString()); 
+     
     }
 }
