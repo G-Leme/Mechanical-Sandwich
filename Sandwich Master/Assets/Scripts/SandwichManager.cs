@@ -10,6 +10,9 @@ public class SandwichManager : MonoBehaviour
 {
     [SerializeField] private Sandwich currentSandwich;
     [SerializeField] private Sandwich[] sandwiches;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject rightRecipy;
+    [SerializeField] private GameObject wrongRecipy;
 
     public List<GameObject> selectedIngredients = new List<GameObject>();
     public List<GameObject> correctIngredients = new List<GameObject>();
@@ -46,6 +49,8 @@ public class SandwichManager : MonoBehaviour
 
         if (sandwichIsDone == true)
         {
+           
+            animator.SetBool("WrongOrder", false);
             breadAnimation.Play();
             currentSandwich = sandwiches[Random.Range(0, sandwiches.Length)];
             sandwichIsDone = false;
@@ -63,15 +68,21 @@ public class SandwichManager : MonoBehaviour
         }
         else
         {
-                if (correctIngredients[0] == selectedIngredients[0] && correctIngredients[1] == selectedIngredients[1]
+            rightRecipy.SetActive(false);
+            wrongRecipy.SetActive(false);
+
+            if (correctIngredients[0] == selectedIngredients[0] && correctIngredients[1] == selectedIngredients[1]
                    && correctIngredients[2] == selectedIngredients[2])
                 {
+                rightRecipy.SetActive(true);
                     sandwichIsDone = true;
                     selectedIngredients.Clear();
                     score += 50;
                 }
                 else
                 {
+                wrongRecipy.SetActive(true);
+                animator.SetBool("WrongOrder", true);
                     sandwichIsDone = true;
                     selectedIngredients.Clear();
                 if(score > 0)

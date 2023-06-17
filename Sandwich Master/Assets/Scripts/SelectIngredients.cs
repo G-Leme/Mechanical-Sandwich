@@ -7,9 +7,13 @@ public class SelectIngredients : MonoBehaviour
 
     [SerializeField] private GameObject ingredient;
     [SerializeField] private Transform ingredientPos;
+
     [SerializeField] private SandwichManager sandwichManagerScript;
     [SerializeField] private GameObject sandwichManager;
+
     [SerializeField] private Vector3 scale;
+    [SerializeField] private Timer timerScript;
+
     private float delay;
 
 
@@ -17,6 +21,7 @@ public class SelectIngredients : MonoBehaviour
 
     private void Start()
     {
+        timerScript = GameObject.FindObjectOfType<Timer>();
        
         delay = 3;
         canClick = true;
@@ -49,7 +54,7 @@ public class SelectIngredients : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (canClick == true && delay <= 0)
+        if (canClick == true && delay <= 0 && timerScript.timer >=0)
         {
            
             var ingredientInstance = GameObject.Instantiate(ingredient, ingredientPos.position, Quaternion.Euler(new Vector3(0, 0, 49)));

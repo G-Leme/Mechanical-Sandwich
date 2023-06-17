@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac15982e7466dbf41b3b493df01a04ff, type: 3}
-  m_Name: HardDriveSandwich
+  m_Name: MotherBoardSandwich
   m_EditorClassIdentifier: 
-  sandwichName: Hard Drive Sandwich
+  sandwichName: Motherboard Sandwich
   ingredients:
   - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}
-  - {fileID: 7393285762444543312, guid: f182d3879d2838846a442b0004cdb6f3, type: 3}
+  - {fileID: 3480243244960299475, guid: 49b762e6a643c7348be10dc5bdee8e26, type: 3}
   - {fileID: 5699754717949636318, guid: 2982b585e7a91cb4385cb7e9d6ccec3e, type: 3}
-  sandwichIcon: {fileID: 21300000, guid: 92301d4577733e54c914684b5c5ebde4, type: 3}
-  sandwichRecipe: {fileID: 21300000, guid: 5502c17c549012549b1aa91228e2b4d7, type: 3}
+  sandwichIcon: {fileID: 21300000, guid: 7fd70c0e0a609694da03432f65c055df, type: 3}
+  sandwichRecipe: {fileID: 21300000, guid: 111496703300e4643afbd6779988bced, type: 3}
