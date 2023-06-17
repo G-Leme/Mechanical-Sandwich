@@ -5,7 +5,9 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private AudioSource timeAudio;
+
     private float delay;
 
     public float timer;
@@ -15,8 +17,17 @@ public class Timer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if (timer <= 30 && timer >= 29.5f)
+        {
+            timeAudio.Play();
+        }
+
+        if (timer <= 10 && timer >= 9.5f)
+            timeAudio.Play();
+
+
         if (delay >= 0)
         {
             delay = delay -= Time.deltaTime;
@@ -27,7 +38,7 @@ public class Timer : MonoBehaviour
             if (timer >= 0)
                 timer = timer -= Time.deltaTime;
 
-            timerText.text = ("Time: " + timer.ToString("0"));
+            timerText.text = (timer.ToString("0"));
         }
     }
 }
