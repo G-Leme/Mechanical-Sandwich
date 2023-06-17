@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private AudioSource timeAudio;
+    [SerializeField] private GameObject timeUpUI;
+    [SerializeField] private GameObject playAgainMenu;
+    [SerializeField] private GameObject mainGame;
 
     private float delay;
 
@@ -19,10 +23,16 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (timer <= 30 && timer >= 29.5f)
+   
+        if (timer <= 0)
         {
-            timeAudio.Play();
+            timeUpUI.SetActive(true);
+           StartCoroutine(EnableScoreUI());
         }
+
+        if (timer <= 30 && timer >= 29.5f)
+            timeAudio.Play();
+        
 
         if (timer <= 10 && timer >= 9.5f)
             timeAudio.Play();
@@ -40,5 +50,12 @@ public class Timer : MonoBehaviour
 
             timerText.text = (timer.ToString("0"));
         }
+    }
+
+    IEnumerator EnableScoreUI()
+    {
+        yield return new WaitForSeconds(2f);
+        playAgainMenu.SetActive(true);
+        mainGame.SetActive(false);
     }
 }

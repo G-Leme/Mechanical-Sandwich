@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SelectIngredients : MonoBehaviour
@@ -56,11 +57,11 @@ public class SelectIngredients : MonoBehaviour
     {
         if (canClick == true && delay <= 0 && timerScript.timer >=0)
         {
-           
+  
             var ingredientInstance = GameObject.Instantiate(ingredient, ingredientPos.position, Quaternion.Euler(new Vector3(0, 0, 49)));
             sandwichManagerScript.selectedIngredients.Add(ingredient);
             canClick = false;
-           
+
         }
     }
 

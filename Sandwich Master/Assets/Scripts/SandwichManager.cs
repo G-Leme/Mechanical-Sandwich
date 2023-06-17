@@ -15,11 +15,12 @@ public class SandwichManager : MonoBehaviour
     [SerializeField] private GameObject wrongRecipy;
     [SerializeField] private GameObject plus50;
     [SerializeField] private GameObject minus50;
+    [SerializeField] private PlayableDirector breadAnimation;
 
     public List<GameObject> selectedIngredients = new List<GameObject>();
     public List<GameObject> correctIngredients = new List<GameObject>();
 
-    public int score;
+    
     public TextMeshProUGUI scoreboard;
 
     public TextMeshProUGUI sandwichName;
@@ -28,7 +29,6 @@ public class SandwichManager : MonoBehaviour
 
     public bool sandwichIsDone;
 
-    [SerializeField] private PlayableDirector breadAnimation;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class SandwichManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreboard.text = ("Score: " + score.ToString()); 
+        scoreboard.text = ("Score: " + Score.Instance.score.ToString()); 
 
         sandwichName.text = currentSandwich.sandwichName;
 
@@ -75,19 +75,16 @@ public class SandwichManager : MonoBehaviour
            rightRecipy.SetActive(false);
            wrongRecipy.SetActive(false);
 
-            if (correctIngredients[0] == selectedIngredients[0] && correctIngredients[1] == selectedIngredients[1]
-                   && correctIngredients[2] == selectedIngredients[2])
-              {
-                plus50.SetActive(true);
-                rightRecipy.SetActive(true);
 
-                sandwichIsDone = true;
-                selectedIngredients.Clear();
+            var hasWrongIngredient = false;
+            for (int i = 0; i < selectedIngredients.Count; i++)
+            {
+                if (correctIngredients[i] != selectedIngredients[i])
+                    hasWrongIngredient = true;
+            }
 
-                score += 50;
-              }
-            else
-              {
+            if (hasWrongIngredient)
+            {
                 minus50.SetActive(true);
                 wrongRecipy.SetActive(true);
 
@@ -96,10 +93,20 @@ public class SandwichManager : MonoBehaviour
 
                 selectedIngredients.Clear();
 
-                if(score > 0)
-                    score -= 50;
-                }
-            
+                if (Score.Instance.score > 0)
+                    Score.Instance.score -= 50;
+            }
+            else
+            {
+                plus50.SetActive(true);
+                rightRecipy.SetActive(true);
+
+                sandwichIsDone = true;
+                selectedIngredients.Clear();
+
+                Score.Instance.score += 50;
+
+            }
 
         }
     }
