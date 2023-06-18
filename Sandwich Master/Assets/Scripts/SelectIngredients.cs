@@ -67,18 +67,23 @@ public class SelectIngredients : MonoBehaviour
 
     private void OnMouseEnter()
     {
-
-        scale.x += 0.035f;
-        scale.y += 0.035f;
-        scale.z += 0.035f;
+        if (timerScript.timer >= 0)
+        {
+            scale.x += 0.035f;
+            scale.y += 0.035f;
+            scale.z += 0.035f;
+        }
 
     }
 
     private void OnMouseExit()
     {
-        scale.x -= 0.035f;
-        scale.y -= 0.035f;
-        scale.z -= 0.035f;
+        if (timerScript.timer >= 0)
+        {
+            scale.x -= 0.035f;
+            scale.y -= 0.035f;
+            scale.z -= 0.035f;
+        }
     }
 
     private void DestroyInstances()

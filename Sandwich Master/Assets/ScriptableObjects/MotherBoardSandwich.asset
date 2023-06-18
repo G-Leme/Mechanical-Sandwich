@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}
   - {fileID: 3480243244960299475, guid: 49b762e6a643c7348be10dc5bdee8e26, type: 3}
   - {fileID: 5699754717949636318, guid: 2982b585e7a91cb4385cb7e9d6ccec3e, type: 3}
-  sandwichIcon: {fileID: 21300000, guid: 7fd70c0e0a609694da03432f65c055df, type: 3}
+  sandwichIcon: {fileID: 21300000, guid: fd7f94afe57767641839417795794e14, type: 3}
   sandwichRecipe: {fileID: 21300000, guid: 111496703300e4643afbd6779988bced, type: 3}

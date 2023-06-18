@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    [SerializeField] private int finalScore;
     public int score;
 
     public static Score Instance;

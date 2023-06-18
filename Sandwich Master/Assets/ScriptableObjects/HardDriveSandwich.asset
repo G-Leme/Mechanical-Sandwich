@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandwichName: Hard Drive Sandwich
   ingredients:
-  - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}
   - {fileID: 7393285762444543312, guid: f182d3879d2838846a442b0004cdb6f3, type: 3}
+  - {fileID: 3958964915546499904, guid: 64cd44f902f68804bb745f88d599d40e, type: 3}
   - {fileID: 5699754717949636318, guid: 2982b585e7a91cb4385cb7e9d6ccec3e, type: 3}
-  sandwichIcon: {fileID: 21300000, guid: 92301d4577733e54c914684b5c5ebde4, type: 3}
-  sandwichRecipe: {fileID: 21300000, guid: 5502c17c549012549b1aa91228e2b4d7, type: 3}
+  sandwichIcon: {fileID: 21300000, guid: eb2d1659ad6d93248b1c1c760c803cf6, type: 3}
+  sandwichRecipe: {fileID: 21300000, guid: 6aefe964ae61de24a91d2663423c6094, type: 3}
